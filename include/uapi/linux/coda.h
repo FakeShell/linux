@@ -218,7 +218,7 @@ struct coda_vattr {
 	vuid_t		va_uid;		/* owner user id */
 	vgid_t		va_gid;		/* owner group id */
 	long		va_fileid;	/* file id */
-	u_quad_t	va_size;	/* file size in bytes */
+	uint64_t	va_size;	/* file size in bytes */
 	long		va_blocksize;	/* blocksize preferred for i/o */
 	struct timespec	va_atime;	/* time of last access */
 	struct timespec	va_mtime;	/* time of last modification */
@@ -226,8 +226,8 @@ struct coda_vattr {
 	u_long		va_gen;		/* generation number of file */
 	u_long		va_flags;	/* flags defined for file */
 	cdev_t	        va_rdev;	/* device special file represents */
-	u_quad_t	va_bytes;	/* bytes of disk space held by file */
-	u_quad_t	va_filerev;	/* file modification number */
+	uint64_t	va_bytes;	/* bytes of disk space held by file */
+	uint64_t	va_filerev;	/* file modification number */
 };
 
 #endif 
